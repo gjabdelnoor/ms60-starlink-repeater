@@ -2,6 +2,8 @@
 
 This records two successful installation paths. It is a manual procedure for MS60 owners, with no universal flasher or automatic password recovery.
 
+Run `bash ./flash-ms60.sh` from the repository to follow the download and browser-upload steps interactively. The script verifies the image before opening admin pages. It leaves authentication, the upload action, and confirmation of the completed reboot to the operator. The host addressing and recovery details below still apply.
+
 ## Identify the hardware and image
 
 Read the label: **MS60 satellite**, not MR60, MS70, MS80, or another Nighthawk product. A UI identifying the converted unit as `RT-AX56U` is expected for this SWRT build; it does not make an ASUS image interchangeable with an MS60 image.

@@ -32,7 +32,10 @@ The reusable script is a parameterized template of the working commands. Its new
 
 ```sh
 sh -n scripts/services-start.sh
+bash -n flash-ms60.sh
 python -m pytest -q
 ```
+
+The flashing guide is tested with a tiny explicitly labeled test image, a test manifest, a stand-in downloader, and a stand-in browser. These checks cover rejection of another model choice, corrupt downloads, invalid admin addresses, safe reuse of an existing image, operator pauses, and the expected browser destinations. They do not contact an actual router or perform a firmware write.
 
 No deployment changes are required to create or validate this repository.

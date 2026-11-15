@@ -4,6 +4,22 @@ Repurpose used NETGEAR Nighthawk MS60 satellites as wireless extenders for a Sta
 
 The practical pitch: inexpensive used MS60 satellites can extend Starlink Wi-Fi with the same network name and password. Used units have appeared around US $30 on eBay; shipping, condition, and power adapters vary. See [price evidence](docs/portability.md#used-hardware-prices).
 
+## Start the flashing guide
+
+Use Bash 3.2 or newer, Python 3, `curl`, and a desktop browser. The script uses Python's standard library; no pip packages or root privileges are required for the guide itself. The stock satellite must have power and a reachable admin address. Have a way to join its setup Wi-Fi after flashing, and read the [installation and recovery notes](docs/installation.md) first.
+
+```sh
+git clone https://github.com/gjabdelnoor/ms60-starlink-repeater.git
+cd ms60-starlink-repeater
+bash ./flash-ms60.sh
+```
+
+The repository is currently private; cloning requires access to it. An authorized ZIP download works too: extract it and run the script from that directory.
+
+The guide downloads `MS60.chk` into the current directory, verifies its exact size and SHA-256 against the tested manifest, opens the stock login and firmware upload pages, and pauses for the browser upload and reboot. If that filename already exists, the guide verifies it instead of overwriting it. It then opens SWRT setup and explains the repeater configuration and radio-address check. Browser login keeps credentials local and preserves the stock login challenge cookie.
+
+This is an interactive installation walkthrough. The operator uploads the image in the browser and confirms progress; automated firmware installation, network-interface changes, credential collection, and recovery flashing are outside the script. The new guide's flow is tested with local stand-ins, and the underlying manual procedure is the one used on the two physical MS60s.
+
 ## What works
 
 - Wireless uplink on 2.4 GHz, with downstream Wi-Fi on both 2.4 and 5 GHz.
@@ -39,9 +55,11 @@ These are wireless repeaters using client-driven roaming. They do not appear as 
 
 ## Files included
 
+- `flash-ms60.sh`: interactive firmware download, verification, and browser-based flashing guide.
 - `examples/repeater-settings.json`: settings template with credential placeholders.
 - `scripts/services-start.sh`: configurable version of the startup radio-address correction.
 - `tests/test_radio_mac.py`: local tests of the script's address validation.
+- `tests/test_flash_guide.py`: local checks for the guide's image checks and operator flow.
 - `evidence/verified-results.json`: sanitized observations from the two-unit deployment.
 - `communications/twitter-draft.txt`: interest-check post; a draft only.
 - `firmware-manifest.json`: upstream image URL, SHA-256, size, and observed identity.

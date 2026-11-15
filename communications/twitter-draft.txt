@@ -1,1 +1,1 @@
-Those ~$30 used Nighthawk MS60 satellites on eBay can extend Starlink over Wi-Fi. We got two working with a Starlink Gen 3 router using SWRT, with one network name and observed roaming. Want the setup guide + scripts?
+Used $30–$40 Nighthawk MS60 satellites can extend Starlink over Wi-Fi. We got two working with a Gen 3 Starlink router using SWRT: one network name, observed roaming. Flashing guide + scripts are ready. Anyone want to try it?

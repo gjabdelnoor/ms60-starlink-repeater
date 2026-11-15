@@ -33,6 +33,8 @@ One automatic client roam was observed. There is no measured handoff duration, r
 
 The cost hook is **roughly $30 used MS60 satellites**, not a guaranteed complete kit price. On November 15, 2026, an [eBay MS60 listing](https://www.ebay.com/itm/206252342084) displayed US $21.87 plus $6.95 shipping for the shown destination, totaling $28.82, without a power adapter. The [MS60 market page](https://www.ebay.com/shop/ms60-satellite?_nkw=ms60+satellite) also showed listings near $30 and above. Listings, shipping destinations, condition, and included adapters can change.
 
+An [MS60 listing including a genuine OEM power adapter](https://www.ebay.com/itm/168839545882), inspected on the same date, displayed US $35.97 and free shipping for the shown US destination, before tax. Its seller described the unit as tested, working, and factory-reset. This is a concrete adapter-included example for an approximate $30–$40 used-hardware pitch.
+
 Check the actual model label and power supply. Search results also include MR60 routers and other satellite models; those are not automatically substitutes for an MS60.
 
 ## Why publish the guide
