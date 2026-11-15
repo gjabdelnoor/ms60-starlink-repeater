@@ -41,10 +41,10 @@ Check the actual model label and power supply. Search results also include MR60 
 
 There is a concrete reuse opportunity: inexpensive orphaned MS60 satellites can extend a tested Starlink installation without the original MR60. The guide can save other owners the failed password diagnoses, single-port setup confusion, and duplicate radio identity problem encountered here. The small scope makes it easier for another owner to reproduce and report their hardware and firmware versions.
 
-## What should wait
+## Public release scope
 
-Keep the repository private for the first review, then consider publishing documentation and the original configuration script with upstream attribution. Keep firmware downloads at the maintainer's source. Upstream's repository contains GPL-licensed components; this project has not established redistribution terms for every component in the downloadable firmware image. This repository does not mirror that image or relicense third-party code. [Upstream license](https://raw.githubusercontent.com/SWRT-dev/asuswrt-bcm/master/License).
+The public repository provides documentation, an interactive flashing walkthrough, and the original configuration script with upstream attribution. Firmware downloads remain at the maintainer's source. Upstream's repository contains GPL-licensed components; this project has not established redistribution terms for every component in the downloadable firmware image. This repository does not mirror that image or relicense third-party code. [Upstream license](https://raw.githubusercontent.com/SWRT-dev/asuswrt-bcm/master/License).
 
-A turnkey firmware/installer release should wait for an independent same-model reproduction, a clearer revision matrix, a demonstrated rollback path from SWRT, and broader network recovery tests. Those are practical support gaps in the current evidence, not prerequisites for privately sharing this field guide.
+A turnkey firmware/installer release should wait for an independent same-model reproduction, a clearer revision matrix, a demonstrated rollback path from SWRT, and broader network recovery tests. Those are practical support gaps in the current evidence; the public field guide describes the tested procedure and its limits.
 
-The interest-check post should lead with inexpensive Nighthawk MS60 satellites extending Starlink, identify Gen 3 as the tested router, and ask whether people want the guide and scripts. The post remains a draft. A public post must not link readers to the still-private repository as if they can access it.
+The copyable interest-check post leads with inexpensive Nighthawk MS60 satellites extending Starlink and identifies Gen 3 as the tested router. Share the [public repository](https://github.com/gjabdelnoor/ms60-starlink-repeater) for the guide and scripts. The text in `communications/twitter-draft.txt` is available for the owner to publish; this repository does not post to social media.

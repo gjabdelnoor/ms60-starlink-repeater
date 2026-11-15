@@ -1,8 +1,10 @@
-# Nighthawk MS60 wireless repeaters for Starlink
+# Extend Starlink Wi-Fi with Nighthawk MS60 satellites
 
-Repurpose used NETGEAR Nighthawk MS60 satellites as wireless extenders for a Starlink Gen 3 router, using upstream SWRT firmware. Two MS60s were converted and tested in one household on November 15, 2026. The original NETGEAR MR60 router was dead and was not needed for the resulting setup.
+Turn inexpensive used NETGEAR Nighthawk MS60 satellites into wireless extenders for Starlink using SWRT firmware. Keep the same Wi-Fi network name and password, with client-driven roaming between access points.
 
-The practical pitch: inexpensive used MS60 satellites can extend Starlink Wi-Fi with the same network name and password. Used units have appeared around US $30 on eBay; shipping, condition, and power adapters vary. See [price evidence](docs/portability.md#used-hardware-prices).
+**Tested on two MS60 satellites with a Starlink Gen 3 router.** Both provided Internet over Wi-Fi and Ethernet; an automatic client roam was observed. The original NETGEAR MR60 router was dead and was not needed for the resulting setup. Testing took place in one household on November 15, 2026.
+
+Used MS60s have appeared around **US $30–$40**, including an adapter-included example at $35.97 before tax. Prices and shipping vary. See the [linked price examples](docs/portability.md#used-hardware-prices).
 
 ## Start the flashing guide
 
@@ -14,7 +16,7 @@ cd ms60-starlink-repeater
 bash ./flash-ms60.sh
 ```
 
-The repository is currently private; cloning requires access to it. An authorized ZIP download works too: extract it and run the script from that directory.
+You can also [download the ZIP](https://github.com/gjabdelnoor/ms60-starlink-repeater/archive/refs/heads/main.zip), extract it, and run the script from that directory.
 
 The guide downloads `MS60.chk` into the current directory, verifies its exact size and SHA-256 against the tested manifest, opens the stock login and firmware upload pages, and pauses for the browser upload and reboot. If that filename already exists, the guide verifies it instead of overwriting it. It then opens SWRT setup and explains the repeater configuration and radio-address check. Browser login keeps credentials local and preserves the stock login challenge cookie.
 
@@ -61,13 +63,15 @@ These are wireless repeaters using client-driven roaming. They do not appear as 
 - `tests/test_radio_mac.py`: local tests of the script's address validation.
 - `tests/test_flash_guide.py`: local checks for the guide's image checks and operator flow.
 - `evidence/verified-results.json`: sanitized observations from the two-unit deployment.
-- `communications/twitter-draft.txt`: interest-check post; a draft only.
+- `communications/twitter-draft.txt`: copyable interest-check post.
 - `firmware-manifest.json`: upstream image URL, SHA-256, size, and observed identity.
 
 The repository contains original documentation and a small configuration script. Firmware development credit belongs to [SWRT](https://github.com/SWRT-dev/asuswrt-bcm), [paldier](https://blog.paldier.com/mk6x/), and their upstream projects. The installed image was an unmodified upstream download. Firmware binaries, credential exports, device certificates, packet captures, and household identifiers are excluded.
 
-## Current release position
+## Project status
 
-Keep the repository private while reviewing the guide. A public guide and script are a reasonable next release after an independent MS60 reproduction. A turnkey installer or generalized firmware release would overstate the current test coverage. Upstream currently marks the MS60 firmware family EOL; the version used here is older than the index's listed 5.2.9 release. [Upstream firmware index](https://blog.paldier.com/categories/firmware/).
+This public release contains the field guide, interactive flashing walkthrough, and configuration scripts. Independent reproduction reports are welcome: include the satellite model, stock and SWRT versions, upstream router, and the steps that worked or failed. Keep passwords and device identifiers out of reports.
+
+The hardware procedure was tested on two MS60s; the new Bash walkthrough was tested locally with stand-ins. Upstream currently marks the MS60 firmware family EOL, and the version used here is older than the index's listed 5.2.9 release. [Upstream firmware index](https://blog.paldier.com/categories/firmware/).
 
 This repository's [MIT license](LICENSE) applies to its original material only. See [third-party attribution](THIRD_PARTY.md) for upstream firmware and tool references.
