@@ -1,0 +1,17 @@
+{
+  "model": "NETGEAR MS60",
+  "source_url": "https://firmware.swrt.site/firmware/NETGEAR/MS60/MS60.chk",
+  "bytes": 37355598,
+  "sha256": "bcb9ac2bdbd6313c1738413aa1cc4caa6a8ddd19c905f327c231d13ab5aa8c15",
+  "board_id": "U12H414T10_NETGEAR",
+  "chk_header_bytes": 58,
+  "stock_uploader_version": "V1.0.6.112_2.0.50",
+  "observed_runtime": "MS60_R5.1.9-g816a96e",
+  "observed_product_id": "RT-AX56U",
+  "observed_base_firmware": "3.0.0.4.386",
+  "validated_units": 2,
+  "validated_upstream": "Starlink Gen 3 / Router 3, WPA2-Personal AES",
+  "validation_date": "2026-11-15",
+  "binary_included": false,
+  "newer_5_2_9_installed_or_validated": false
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-15",
+  "scope": "Two physical MS60 satellites, one Starlink Gen 3 household network",
+  "identifiers": "Unit labels replace household addresses, SSIDs, certificates, and device IDs",
+  "firmware": "MS60_R5.1.9-g816a96e",
+  "unit_a": {
+    "stock_before_swrt": "V1.1.9.146_2.0.72",
+    "stock_recovery_performed": true,
+    "wifi_http_status": 200,
+    "ethernet_http_status": 200,
+    "automatic_client_roam_observed": true,
+    "client_ipv4_retained_during_observed_roam": true,
+    "handoff_latency_measured": false
+  },
+  "unit_b": {
+    "stock_before_swrt": "V1.1.7.134_2.0.65",
+    "stock_recovery_performed": false,
+    "wifi_unique_test_ssid_association_verified": true,
+    "wifi_interface_bound_http_status": 200,
+    "ethernet_interface_bound_http_status": 200,
+    "final_ethernet_http_status": 200,
+    "both_downstream_ssids_match_upstream": true,
+    "upstream_dhcp_used": true,
+    "repeater_dhcp_server_enabled": false,
+    "observed_parent": "Unit A 2.4 GHz radio",
+    "unique_5ghz_driver_address_verified": true,
+    "startup_correction_reboot_verified": true,
+    "final_ssid_reboot_verified": true,
+    "temporary_ssh_disabled": true,
+    "temporary_admin_host_alias_removed": true,
+    "temporary_credential_files_removed": true
+  },
+  "native_starlink_managed_mesh_adoption": false,
+  "throughput_benchmark_performed": false,
+  "long_duration_stability_benchmark_performed": false,
+  "simultaneous_node_restart_test_performed": false
+}
